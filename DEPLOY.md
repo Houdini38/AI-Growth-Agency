@@ -55,7 +55,7 @@ npx wrangler d1 execute byhoward-leads --remote \
    adds the MX/SPF DNS records for you).
 2. **Destination addresses** → add your inbox → click the verification link
    Cloudflare emails you.
-3. **Custom addresses** → create `leads@byhoward.com` (route it to your inbox).
+3. **Custom addresses** → create `info@byhoward.com` (route it to your inbox).
 4. In `wrangler.jsonc`, uncomment the `send_email` block and the `vars` block;
    make sure `EMAIL_TO` matches the verified destination address exactly.
    Commit, push.

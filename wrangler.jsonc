@@ -35,7 +35,7 @@
     { "name": "EMAIL", "destination_address": "howdog38@gmail.com" }
   ],
   "vars": {
-    "EMAIL_FROM": "leads@byhoward.com",
+    "EMAIL_FROM": "info@byhoward.com",
     "EMAIL_TO": "howdog38@gmail.com"
   }
 

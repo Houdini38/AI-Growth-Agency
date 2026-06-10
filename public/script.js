@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(function () {
           button.disabled = false;
           status.classList.add('error');
-          status.textContent = "Something went wrong — please email hello@byhoward.com and we'll take care of you.";
+          status.textContent = "Something went wrong — please email info@byhoward.com and we'll take care of you.";
         });
     });
   });
