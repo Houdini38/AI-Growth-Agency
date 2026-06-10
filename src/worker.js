@@ -80,8 +80,14 @@ async function handleLead(request, env) {
       fields,
       "",
     ].join("\r\n");
-    await env.EMAIL.send(new EmailMessage(env.EMAIL_FROM, env.EMAIL_TO, raw));
-    emailed = true;
+    try {
+      await env.EMAIL.send(new EmailMessage(env.EMAIL_FROM, env.EMAIL_TO, raw));
+      emailed = true;
+    } catch (err) {
+      // A failed notification must not lose the lead (it may already be in
+      // D1) or show the visitor an error.
+      console.error("Email notification failed:", err);
+    }
   }
 
   if (!stored && !emailed) {

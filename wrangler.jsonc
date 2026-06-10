@@ -28,17 +28,16 @@
     }
   ]
 
-  // ── Step: email notifications via Cloudflare Email Routing ──────────
+  // ── Email notifications via Cloudflare Email Routing ────────────────
   // Requires Email Routing enabled on the byhoward.com zone and the
-  // destination address verified. Then uncomment.
-  //
-  // ,"send_email": [
-  //   { "name": "EMAIL", "destination_address": "howdog38@gmail.com" }
-  // ],
-  // "vars": {
-  //   "EMAIL_FROM": "leads@byhoward.com",
-  //   "EMAIL_TO": "howdog38@gmail.com"
-  // }
+  // destination address verified.
+  ,"send_email": [
+    { "name": "EMAIL", "destination_address": "howdog38@gmail.com" }
+  ],
+  "vars": {
+    "EMAIL_FROM": "leads@byhoward.com",
+    "EMAIL_TO": "howdog38@gmail.com"
+  }
 
   // ── Step: Turnstile spam protection (secret side) ───────────────────
   // Set the secret instead of putting it here:
