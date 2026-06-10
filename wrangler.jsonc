@@ -2,7 +2,9 @@
   // Cloudflare Workers configuration for byhoward.com
   // Deploys the static site from ./public plus the /api/lead form endpoint.
   // Docs: https://developers.cloudflare.com/workers/wrangler/configuration/
-  "name": "byhoward",
+  // Must match the Worker name in the Cloudflare dashboard (the Worker the
+  // GitHub repo is connected to), or builds deploy to a separate Worker.
+  "name": "ai-growth-agency",
   "main": "src/worker.js",
   "compatibility_date": "2026-06-01",
 
