@@ -17,18 +17,16 @@
     "enabled": true
   }
 
-  // ── Step: D1 database for storing leads ─────────────────────────────
-  // 1. npx wrangler d1 create byhoward-leads
-  // 2. Paste the database_id it prints below, then uncomment.
-  // 3. npx wrangler d1 execute byhoward-leads --remote --file=./schema.sql
-  //
-  // ,"d1_databases": [
-  //   {
-  //     "binding": "DB",
-  //     "database_name": "byhoward-leads",
-  //     "database_id": "PASTE-DATABASE-ID-HERE"
-  //   }
-  // ]
+  // ── D1 database for storing leads ────────────────────────────────────
+  // Schema: ./schema.sql (apply with
+  //   npx wrangler d1 execute byhoward-leads --remote --file=./schema.sql)
+  ,"d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "byhoward-leads",
+      "database_id": "7ce21dd4-9d7f-4e0c-a120-caff17a894fb"
+    }
+  ]
 
   // ── Step: email notifications via Cloudflare Email Routing ──────────
   // Requires Email Routing enabled on the byhoward.com zone and the
