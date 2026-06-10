@@ -13,6 +13,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    // Canonical host: all ranking signals consolidate on byhoward.com.
+    if (url.hostname === "www.byhoward.com") {
+      url.hostname = "byhoward.com";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (url.pathname === "/api/lead") {
       if (request.method !== "POST") {
         return json({ error: "Method not allowed" }, 405);
